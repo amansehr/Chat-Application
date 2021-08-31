@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Room</h1>
+<h3>{{ message }}</h3>
+<div class = "login-card">
+<div class="card">
+<div class="card-body">
+<form method="post">
+    <label>Room Name:</label>
+    <input type="text" name="room_name" value="{{ room.name }}">
+    <br>
+    <label>Members:</label>
+    <input type="text" name="members" value="{{ room_members_str }}">
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="/rooms/{{ room._id }}">
+        <button class="btn btn-primary">Back</button>
+</a>
+</div>
+</div>
+</div>
+{% endblock %}
